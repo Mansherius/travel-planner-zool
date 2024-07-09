@@ -1,0 +1,26 @@
+.tabBar{
+
+    @apply flex items-center justify-center;
+
+}
+.tabBarContent{
+    @apply container mx-auto flex justify-center p-2;
+    margin: 20px;
+}
+.tabBarName{
+    @apply bg-white flex items-center justify-center space-x-4 rounded-full p-2 shadow-lg ;
+     
+}
+.tabBarLabel{
+    @apply px-4 py-2 cursor-pointer hover:text-blue-500 text-gray-700 font-semibold;
+    font-size:18px
+}
+.tabBarSeperator{
+    @apply px-2
+}
+/* @media (min-width:2083px)and (max-width:2685px) {
+    .tabBarContent{
+    
+    }
+    
+} */
