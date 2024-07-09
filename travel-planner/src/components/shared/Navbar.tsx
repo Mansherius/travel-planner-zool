@@ -38,7 +38,7 @@ export const Navbar = () => {
           <Link
             href="/home"
             className={`mx-2 hover:text-blue-500 font-livvic ${
-              pathname === "/" ? "text-orange-500 font-extrabold" : ""
+              pathname === "/home" ? "text-orange-500 font-extrabold" : ""
             }`}
           >
             Home

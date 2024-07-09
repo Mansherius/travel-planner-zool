@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './cards.module.css';
 import { FaStar, FaRegStar, FaStarHalfAlt, FaTimes, FaPlus } from 'react-icons/fa'; // Added FaTimes and FaPlus
 
-const Card = ({ cardData, onClick, onClose, isSelected }: any) => {
+const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
   const { title, subtitle, imageUrl, rating, price, description } = cardData;
 
   const renderStars = (rating: any) => {
@@ -26,8 +26,7 @@ const Card = ({ cardData, onClick, onClose, isSelected }: any) => {
   };
 
   return (
-    <div className={`${styles.card} ${isSelected ? styles.selectedCard : ''}`} onClick={!isSelected ? onClick : undefined}>
-      <div className={styles.cardBody}>
+    <div className={`${styles.card} ${isSelected ? styles.selectedCard : ''}`}>
         <div className={styles.cardHeader}>
           <div className={styles.cardTitle}>
             <h4>{title}</h4>
@@ -39,11 +38,12 @@ const Card = ({ cardData, onClick, onClose, isSelected }: any) => {
                 <FaTimes size={20} />
               </div>
             )}
-            <div className={styles.cardPlusIcon}>
+            <div className={styles.cardPlusIcon} onClick={()=>onAdd()}>
               <FaPlus size={20} />
             </div>
           </div>
         </div>
+      <div className={styles.cardBody}  onClick={!isSelected ? onClick : undefined}>
         <div className={styles.cardImage}>
           <Image 
             src={imageUrl} 
