@@ -1,0 +1,55 @@
+/* src/app/styles/searchbar.module.css */
+.searchbar {
+    @apply flex items-center bg-white rounded-full shadow-md p-2 w-full max-w-3xl left-80;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  
+  .dropdown {
+    @apply   bg-transparent text-gray-600  px-4 py-2 rounded-l-full ;
+    
+    background-color: transparent;
+    color: #4a5568;
+    outline: none;
+    padding-left: 1rem;
+    padding-right: 3px;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    font-size: medium;
+    font-weight: 600;
+  }
+  
+  .input {
+    @apply flex-grow px-4 py-2 border-none rounded-full focus:outline-none;
+    flex-grow: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    border-radius: 9999px;
+    outline: none;
+    font-style: italic;
+    font-size: medium;
+  }
+  
+  .searchButton {
+    @apply bg-blue-500 text-white rounded-full p-2 ml-2;
+    background-color: #e6e6e6;
+    color: white;
+    border-radius: 9999px;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  
