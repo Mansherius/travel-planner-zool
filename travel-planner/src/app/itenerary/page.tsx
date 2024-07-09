@@ -2,22 +2,23 @@
 import React, { useState } from "react";
 import { TbSquareRoundedPlusFilled } from "react-icons/tb";
 import { FiSearch } from "react-icons/fi";
-import { FaRegCalendarAlt } from "react-icons/fa";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { format } from "date-fns";
 import Writedate from "@/components/shared/WrittenDate";
+import ButtonBar from "@/components/itinerary/ButtonBar";
 
 const Itinerary = () => {
-  const [dateRange, setDateRange] = useState<[Date | undefined, Date | undefined]>([new Date(2024, 6, 1), new Date(2024, 6, 4)]);
-  const [startDate, endDate] = dateRange;
-
   return (
         <div className="w-100% min-h-screen md:mx-[50px] lg:mx-[150px] flex justify-center bg-blue-50">
-            <section className="mx-auto w-[55%] bg-slate-50">
-                <div className="flex justify-between p-4 text-2xl tracking-wide ">
-                <p>Trip to Goa</p>
-                <Writedate />
+            <section className="mx-auto w-[55%] bg-slate-50 p-4">
+                <div className="flex justify-between pb-2 text-2xl tracking-wide ">
+                    <p>Trip to Goa</p>
+                    <Writedate />
+                </div>
+                <div className="py-4">
+                    <ButtonBar/>
+                </div>
+                <div>
+                    <p className="flex justify-center items-center uppercase tracking-widest text-2xl">add the corousel here for the skeleton</p>
                 </div>
             </section>
 
