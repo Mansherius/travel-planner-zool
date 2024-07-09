@@ -61,11 +61,11 @@
   border-radius: 50%;
   border: none;
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.12);
+  color: rgb(41, 216, 216);
 }
 
 .cardCloseIcon {
   margin-right: 1rem;
-  color: aqua;
   
 }
 
@@ -85,6 +85,7 @@
 
 .starContainer {
   position: absolute;
+  display: flex;
   z-index: 1;
   background-color: #eee;
   padding: 8px 12px;
@@ -103,6 +104,7 @@
   
 }
 .cardFooter div{
+  display: flex;
   padding: 8px 12px;
   background-color: #ddd8d8;
   border-radius: 15px;
