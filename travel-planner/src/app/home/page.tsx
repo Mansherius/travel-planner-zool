@@ -5,8 +5,10 @@ import TravelerReview from "@/components/home/TravelerReview";
 import FeedbackForm from "@/components/home/FeedbackForm";
 import Footer from "@/components/shared/Footer";
 import React from 'react';
+import Link from 'next/link';
 
 export default function Home() {
+ 
   const SearchIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="11" cy="11" r="8"></circle>
@@ -34,7 +36,7 @@ export default function Home() {
   const travelerReviews = [
     {
       name: "Anna S.",
-      image: "/images/anna.jpg",
+      image: "/images/home/anna.jpg",
       rating: 5,
       review:
         "Planorama made planning my trip to Goa a breeze! The curated itineraries were spot-on, and I loved being able to customize my trip effortlessly.",
@@ -42,7 +44,7 @@ export default function Home() {
     },
     {
       name: "David Wilson",
-      image: "/images/david.jpg",
+      image: "/images/home/david.jpg",
       rating: 5,
       review:
         "Planning a family vacation can often be a daunting task, but Planorama transformed it into an enjoyable experience. The customized itinerary they created using the site, made it easy to plan our days efficiently. The detailed descriptions of each attraction, along with user reviews, helped us make informed decisions for our family.",
@@ -50,7 +52,7 @@ export default function Home() {
     },
     {
       name: "Emily J.",
-      image: "/images/emily.jpg",
+      image: "/images/home/emily.jpg",
       rating: 5,
       review:
         "As a photographer, I needed to find the best spots quickly. Planorama helped me shortlist all the must-visit locations in no time!",
@@ -58,7 +60,7 @@ export default function Home() {
     },
     {
       name: "Anna S.",
-      image: "/images/anna.jpg",
+      image: "/images/home/anna.jpg",
       rating: 5,
       review:
         "As a photographer, I needed to find the best spots quickly. Planorama helped me shortlist all the must-visit locations in no time!",
@@ -66,11 +68,19 @@ export default function Home() {
     },
     {
       name: "Emily J.",
-      image: "/images/emily.jpg",
+      image: "/images/home/emily.jpg",
       rating: 4,
       review:
         "Planorama made planning my trip to Goa a breeze! The curated itineraries were spot-on, and I loved being able to customize my trip effortlessly.",
       title: "Photographer",
+    },
+    {
+      name: "David Wilson",
+      image: "/images/home/david.jpg",
+      rating: 5,
+      review:
+        "Planning a family vacation can often be a daunting task, but Planorama transformed it into an enjoyable experience.The detailed descriptions of each attraction, along with user reviews, helped us make informed decisions for our family.",
+      title: "Family Vacation Planner",
     },
   ];
 
@@ -146,12 +156,14 @@ export default function Home() {
           </div>
         </div>
         <div className="text-center mt-4">
+          <Link href="/plan">
           <button
             type="submit"
             className="bg-black text-white py-4 px-8 rounded-full hover:bg-gray-800 transition duration-300"
           >
             Start planning
           </button>
+          </Link>
         </div>
       </div>
     </form>
