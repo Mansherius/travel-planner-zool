@@ -44,8 +44,8 @@ const Itinerary: React.FC = () => {
         <Carousel days={days} />
       </section>
 
-      <section className={`transition-transform duration-500 w-[45%] ${showMap ? "hidden" : "block"}`}>
-        <div className="bg-gray-100 flex flex-col p-4">
+      <section className={`transition-transform duration-500 w-[45%] flex-grow ${showMap ? "hidden" : "flex"} flex-col`}>
+        <div className="bg-gray-100 flex flex-col p-4 h-full">
           <div className="flex justify-between pb-2">
             <p className="text-4xl font-bold">Shortlist</p>
             <TbSquareRoundedPlusFilled size={30} className="my-auto mr-2" />
@@ -78,7 +78,7 @@ const Itinerary: React.FC = () => {
         </div>
       </section>
 
-      <section className={`transition-transform duration-500 w-[45%] ${showMap ? "block" : "hidden"}`} id="map">
+      <section className={`transition-transform duration-500 w-[45%] flex-grow flex-col ${showMap ? "flex" : "hidden"}`} id="map">
         {/* Map content goes here */}
       </section>
     </div>
