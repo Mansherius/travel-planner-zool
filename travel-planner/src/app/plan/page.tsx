@@ -2,9 +2,7 @@
 import React, { useRef, useState } from "react";
 import Banner from "../../components/second.page/banner/banner";
 import Card from "../../components/second.page/card/card";
-import TabBar from "../../components/second.page/tabbar/tabbar";
-import styles from "./index.module.css";
-
+import Footer from "@/components/shared/Footer";
 const cardData = [
   {
     uid:1,
@@ -199,7 +197,7 @@ const SecondPage: React.FC = () => {
   return (
     <div className="mx-auto min-h-screen">
       <Banner onSearch={handleSearch} onTabChange={handleTabChange} onSortChange={handleSortChange} cartCount={cardCount.length}/>
-      <div className="absolute top-[900px]  inset-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:mx-10 xl:mx-[200px] justify-center items-center">
+      <div className="flex-grow mt-8  inset-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:mx-10 xl:mx-[200px] justify-center items-center">
         {sortedCardData.map((data, index) => (
           <Card
             key={index}
@@ -212,6 +210,7 @@ const SecondPage: React.FC = () => {
         ))}
       </div>
     </div>
+  
   );
 };
 
