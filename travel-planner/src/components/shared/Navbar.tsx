@@ -44,9 +44,9 @@ export const Navbar = () => {
             Home
           </Link>
           <Link
-            href="/my_trips"
+            href="/itinerary"
             className={`mx-2 hover:text-blue-500  ${
-              pathname === "/my_trips" ? "text-orange-500 font-extrabold" : ""
+              pathname === "/itinerary" ? "text-orange-500 font-extrabold" : ""
             }`}
           >
             My Trips
