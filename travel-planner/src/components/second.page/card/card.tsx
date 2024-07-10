@@ -26,7 +26,7 @@ const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
   };
 
   return (
-    <div className={`${styles.card} ${isSelected ? styles.selectedCard : ''}`}>
+    <div className={`${styles.card}    ${isSelected ? styles.selectedCard : ''}`}>
         <div className={styles.cardHeader}>
           <div className={styles.cardTitle}>
             <h4>{title}</h4>
@@ -43,7 +43,7 @@ const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
             </div>
           </div>
         </div>
-      <div className={styles.cardBody}  onClick={!isSelected ? onClick : undefined}>
+      <div className={styles.cardBody}   onClick={!isSelected ? onClick : undefined}>
         <div className={styles.cardImage}>
           <Image 
             src={imageUrl} 
@@ -51,7 +51,8 @@ const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
             layout='fill'
             className='object-cover'
           />
-          <div className={styles.starContainer}>
+          <div className={styles.starContainer} >
+
             {renderStars(rating)}
             <span className='text-xl'>2k</span>
           </div>

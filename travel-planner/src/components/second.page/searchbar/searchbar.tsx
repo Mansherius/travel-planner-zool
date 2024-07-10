@@ -9,11 +9,7 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  useEffect(() => {
-    return () => {
-      setSearchQuery("");
-    };
-  }, []);
+
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
@@ -22,17 +18,15 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSearch(searchQuery);
+    setSearchQuery("");
   };
 
   return (
     <form onSubmit={handleSearchSubmit} className={styles.searchbar}>
        <div className={styles.dropdown}>
         {/* Dropdown content */}
-        <select>
-          <option>Goa</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
+        <label className="relative px-4 py-2 px-sm-2 py-sm-1 after:content-[''] after:absolute after:right-0  after:top-0  after:h-full pl-2 after:w-px after:bg-gray-500 rounded-full mr-2">Goa 
+        </label>
       </div>
       <input
         type="text"

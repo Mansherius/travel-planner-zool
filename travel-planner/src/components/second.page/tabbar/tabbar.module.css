@@ -4,8 +4,8 @@
 
 }
 .tabBarContent{
-    @apply container mx-auto flex justify-center p-2;
-    margin: 20px;
+    @apply container mx-auto flex justify-center p-2 my-4;
+   
 }
 .tabBarName{
     @apply bg-white flex items-center justify-center space-x-4 rounded-full p-2 shadow-lg ;
@@ -28,3 +28,36 @@
     }
     
 } */
+ @media (max-width:596px){
+    .tabBar{
+        @apply flex items-center justify-center;
+    }
+    .tabBarLabel{
+        @apply px-2 py-0 cursor-pointer flex text-gray-700 font-semibold;
+        font-size: small;
+        text-align: center;
+   
+    }
+ }
+ @media (max-width:423px){
+    .tabBar{
+        @apply flex items-center justify-center;
+    }
+    .tabBarLabel{
+        @apply px-1 py-0 cursor-pointer flex text-gray-700 font-semibold;
+        font-size: small;
+        text-align: center;
+   
+    }
+ }
+ @media (max-width:384px){
+    .tabBar{
+        @apply flex items-center justify-center;
+    }
+    .tabBarLabel{
+        @apply px-0 py-0 cursor-pointer flex text-gray-700 font-semibold;
+        font-size: 12px;
+        text-align: center;
+   
+    }
+ }
