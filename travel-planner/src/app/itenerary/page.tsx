@@ -1,25 +1,30 @@
 "use client";
+// Itinerary.tsx
 import React, { useState } from "react";
 import { TbSquareRoundedPlusFilled } from "react-icons/tb";
 import { FiSearch } from "react-icons/fi";
 import "react-datepicker/dist/react-datepicker.css";
 import Writedate from "@/components/shared/WrittenDate";
 import ButtonBar from "@/components/itinerary/ButtonBar";
+import Carousel from '@/components/itinerary/Carousel';
+import { generateDays } from '@/components/itinerary/dateUtils';
+import { DateRange } from '@/components/itinerary/types';
 
-const Itinerary = () => {
+const Itinerary: React.FC = () => {
+  const [dateRange, setDateRange] = useState<DateRange>({ start: "2023-07-01", end: "2023-07-25" });
+  const days = generateDays(dateRange);
+
   return (
-        <div className="w-100% min-h-screen md:mx-[50px] lg:mx-[150px] flex justify-center bg-blue-50">
-            <section className="mx-auto w-[55%] bg-slate-50 p-4">
-                <div className="flex justify-between pb-2 text-2xl tracking-wide ">
-                    <p>Trip to Goa</p>
-                    <Writedate />
-                </div>
-                <div className="py-4">
-                    <ButtonBar/>
-                </div>
-                <div>
-                    <p className="flex justify-center items-center uppercase tracking-widest text-2xl">add the corousel here for the skeleton</p>
-                </div>
+    <div className="w-100% min-h-screen md:mx-[50px] lg:mx-[150px] flex justify-center bg-blue-50">
+      <section className="mx-auto w-[55%] bg-slate-50 p-4">
+        <div className="flex justify-between pb-2 text-2xl tracking-wide ">
+          <p>Trip to Goa</p>
+          <Writedate onChange={setDateRange} />
+        </div>
+        <div className="py-4">
+          <ButtonBar/>
+        </div>
+        <Carousel days={days} />
             </section>
 
 			<section className="mx-auto w-[45%] bg-gray-100 flex flex-col p-4">
