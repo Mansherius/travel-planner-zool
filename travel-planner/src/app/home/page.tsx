@@ -3,7 +3,7 @@ import FavoriteCard from "@/components/home/FavoriteCard";
 import FavoriteCarousel from "@/components/home/FavoriteCarousel";
 import TravelerReview from "@/components/home/TravelerReview";
 import FeedbackForm from "@/components/home/FeedbackForm";
-import Footer from "@/components/shared/Footer";
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -26,11 +26,15 @@ export default function Home() {
   );
   const favorites = [
     { image: "/images/home/mysuru.jpg", name: "Mysuru", state: "Karnataka" },
+    { image: "/images/home/ladakh.jpg", name: "Leh-Ladakh", state: "Ladakh" },
     { image: "/images/home/jaipur.jpg", name: "Jaipur", state: "Rajasthan" },
     { image: "/images/home/ooty.jpg", name: "Ooty", state: "Tamil Nadu" },
+    { image: "/images/home/srinagar.jpg", name: "Srinagar", state: "Jammu & Kashmir" },
     { image: "/images/home/agra.jpg", name: "Agra", state: "Uttar Pradesh" },
-    { image: "/images/home/jaipur.jpg", name: "Jaipur", state: "Rajasthan" },
-    { image: "/images/home/jaipur.jpg", name: "Jaipur", state: "Rajasthan" },
+    { image: "/images/home/goa.jpg", name: "Goa", state: "India" },
+    { image: "/images/home/manali.jpg", name: "Manali", state: "Himachal Pradesh" },
+    
+    
     // Add more favorites as needed
   ];
   const travelerReviews = [
@@ -194,21 +198,7 @@ export default function Home() {
           <FeedbackForm />
         </div>
       </section>
-      {/* <section className="py-20 bg-black">
-        <div className="gap-8">
-          <div className="text-center">
-            <a href="" className="font-bold text-custom-blue">
-              <h1>Planorama</h1>
-            </a>
-          </div>
-          <div className="">
-
-          </div>
-          <div className=""></div>
-        </div>
-      </section> */}
-      <Footer />
-      {/* You can add more sections below as needed */}
+   
     </main>
   );
 }
