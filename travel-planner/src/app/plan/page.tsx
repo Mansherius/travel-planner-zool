@@ -30,6 +30,7 @@ const cardData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac erat ante. Integer aliquam purus a turpis condimentum, nec consectetur nibh tincidunt. Aenean non erat vel velit varius vehicula. Sed cursus magna vel orci sodales, in condimentum nunc efficitur. Fusce nec urna sit amet magna interdum pharetra. Duis ultricies ipsum et nunc facilisis, vel pharetra sapien sollicitudin. Maecenas tincidunt, purus id molestie fringilla, lectus erat suscipit est, nec cursus lorem urna a nunc. Praesent sit amet erat a justo lacinia aliquet. Phasellus ac ligula in odio fringilla feugiat. In id turpis sed quam blandit efficitur. Donec vel mi quam. Etiam fringilla ante a diam interdum, sed volutpat turpis congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sit amet urna at nunc ullamcorper malesuada.",
   },
   {
+
     uid:3,
     title: "Card 3",
     subtitle: "hdbf",
@@ -59,7 +60,6 @@ const cardData = [
     rating: 5.0,
     price: 55,
     type:"restaurant",
-    description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac erat ante. Integer aliquam purus a turpis condimentum, nec consectetur nibh tincidunt. Aenean non erat vel velit varius vehicula. Sed cursus magna vel orci sodales, in condimentum nunc efficitur. Fusce nec urna sit amet magna interdum pharetra. Duis ultricies ipsum et nunc facilisis, vel pharetra sapien sollicitudin. Maecenas tincidunt, purus id molestie fringilla, lectus erat suscipit est, nec cursus lorem urna a nunc. Praesent sit amet erat a justo lacinia aliquet. Phasellus ac ligula in odio fringilla feugiat. In id turpis sed quam blandit efficitur. Donec vel mi quam. Etiam fringilla ante a diam interdum, sed volutpat turpis congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sit amet urna at nunc ullamcorper malesuada.",
   },
   {
@@ -144,7 +144,7 @@ const SecondPage: React.FC = () => {
   const handleCardClick = (index: number) => {
     setSelectedCard(index);
   };
-
+  
   const handleCloseClick:any = () => {
     setSelectedCard(null);
   };
@@ -210,7 +210,6 @@ const SecondPage: React.FC = () => {
           />
         ))}
       </div>
-    
     </div>
   );
 };

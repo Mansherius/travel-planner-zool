@@ -11,10 +11,10 @@ export const Navbar = () => {
     let menuClasses = [];
     if (isOpen) {
       menuClasses = [
-        "flex",
+        "flex","z-50",
         "absolute",
         "top-[60px]",
-        "bg-black",
+        "bg-white",
         "w-full",
         "p-4",
         "left-0",
