@@ -65,7 +65,7 @@ export const Navbar = () => {
           </Link>
           <Link
             href="/itinerary"
-            className={`${linkClasses} ${
+            className={`mx-2 hover:text-blue-500  ${
               pathname === "/itinerary" ? "text-orange-500 font-extrabold" : ""
             }`}
           >
