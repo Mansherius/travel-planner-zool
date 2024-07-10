@@ -27,8 +27,8 @@ const TravelerReview: React.FC<TravelerReviewProps> = ({ name, image, rating, re
           <Image
             src={image}
             alt={name}
-            width={40}
-            height={40}
+            width={60}
+            height={60}
             className="rounded-full mr-3"
           />
           <div>
