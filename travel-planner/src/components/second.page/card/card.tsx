@@ -62,8 +62,9 @@ const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
           <div className='text-xl'>{rating} <FaStar size={20} className='ml-1 mt-1'/></div>
         </div>
         {isSelected && (
-          <div className={styles.cardDescription}>
+          <div className={styles.cardDescription} >
             <p>{description}</p>
+            
           </div>
         )}
       </div>
