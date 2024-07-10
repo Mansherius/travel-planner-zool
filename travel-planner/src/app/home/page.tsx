@@ -5,6 +5,7 @@ import TravelerReview from "@/components/home/TravelerReview";
 import FeedbackForm from "@/components/home/FeedbackForm";
 import Footer from "@/components/shared/Footer";
 import React from 'react';
+import Link from 'next/link';
 
 export default function Home() {
  
@@ -155,12 +156,14 @@ export default function Home() {
           </div>
         </div>
         <div className="text-center mt-4">
+          <Link href="/plan">
           <button
             type="submit"
             className="bg-black text-white py-4 px-8 rounded-full hover:bg-gray-800 transition duration-300"
           >
             Start planning
           </button>
+          </Link>
         </div>
       </div>
     </form>

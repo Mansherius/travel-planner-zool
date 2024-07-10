@@ -64,9 +64,9 @@ export const Navbar = () => {
             Home
           </Link>
           <Link
-            href="/my_trips"
+            href="/itinerary"
             className={`${linkClasses} ${
-              pathname === "/my_trips" ? "text-orange-500 font-extrabold" : ""
+              pathname === "/itinerary" ? "text-orange-500 font-extrabold" : ""
             }`}
           >
             My Trips
