@@ -11,10 +11,10 @@ export const Navbar = () => {
     let menuClasses = [];
     if (isOpen) {
       menuClasses = [
-        "flex",
+        "flex","z-50",
         "absolute",
         "top-[60px]",
-        "bg-black",
+        "bg-white",
         "w-full",
         "p-4",
         "left-0",
@@ -38,7 +38,7 @@ export const Navbar = () => {
           <Link
             href="/home"
             className={`mx-2 hover:text-blue-500 font-livvic ${
-              pathname === "/" ? "text-orange-500 font-extrabold" : ""
+              pathname === "/home" ? "text-orange-500 font-extrabold" : ""
             }`}
           >
             Home
