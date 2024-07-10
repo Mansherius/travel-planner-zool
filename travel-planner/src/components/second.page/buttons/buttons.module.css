@@ -1,6 +1,6 @@
 /* buttons.module.css */
 .buttons {
-    @apply fixed absolute bottom-56 left-0 right-0 bg-transparent;
+    @apply  absolute bottom-56 left-0 right-0 bg-transparent px-8;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   .buttonsContainer {
@@ -41,10 +41,11 @@
     border-radius: 10px;
     background-color: black;
     padding: 10px;
+    position: relative;
  
   }
   .badge {
-    @apply absolute top-0 right-40  bg-red-500 text-white rounded-full px-2 py-1 text-sm;
+    @apply  absolute -top-5 -right-5  bg-red-500 text-white rounded-full px-2 py-1 text-sm;
   }
   .buttons4:hover{
     background-color:orangered;
@@ -99,6 +100,23 @@
     .badge {
       @apply absolute top-0 right-0  bg-red-500 text-white rounded-full px-1 py-0 ;
       font-size: x-small;
+    }
+  }
+  @media (max-width:1457px){
+    .badge{
+      @apply right-16;
+    }
+  }
+  @media (max-width:1024px){
+    .badge{
+      @apply right-0 px-1 py-0 top-1;
+      font-size: small;
+    }
+  }
+ 
+  @media (min-width:1458px) and (max-width:1600){
+    .badge{
+     margin-right:2px  ;
     }
   }
  

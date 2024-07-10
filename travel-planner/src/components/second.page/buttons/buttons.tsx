@@ -5,10 +5,10 @@ import { FaRegMap } from "react-icons/fa";
 
 interface ButtonsProps {
   onSortChange: (order: string) => void;
-  cartCount:any;
+  cartCount: any;
 }
 
-const Buttons: React.FC<ButtonsProps> = ({ onSortChange,cartCount }) => {
+const Buttons: React.FC<ButtonsProps> = ({ onSortChange, cartCount }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleFilterClick = () => {
@@ -53,7 +53,7 @@ const Buttons: React.FC<ButtonsProps> = ({ onSortChange,cartCount }) => {
         </div>
         <div className={styles.buttonsRight}>
           <button className={styles.buttons3}>Manage Itinerary</button>
-          <button className={styles.buttons4} >
+          <button className={styles.buttons4}>
             <span className={styles.badge}>{cartCount}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
