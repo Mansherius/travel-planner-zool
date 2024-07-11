@@ -62,9 +62,9 @@ const FeedbackForm: React.FC = () => {
         <div className='text-center'>
         <button
           type="submit"
-          className="bg-orange-500 text-black py-2 px-6 rounded-3xl hover:bg-orange-600 transition duration-300 "
+          className="bg-orange-500 text-black py-3 px-8 rounded-3xl hover:bg-orange-600 transition duration-300 "
         >
-            <span className='font-bold text-xl'>
+            <span className='font-bold text-2xl'>
           Submit
           </span>
         </button>
