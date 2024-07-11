@@ -3,19 +3,19 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white p-20">
+    <footer className=" bg-black text-white p-20">
       <div className="container mx-auto flex flex-col items-center space-y-4">
         <Link href="/" className="font-bold text-custom-blue text-2xl">
           <h1>PLANORAMA</h1>
         </Link>
         <div className="flex space-x-6">
-          <Link href="/" className="hover:text-blue-500">
+          <Link href="/" className="hover:text-orange-500">
             Home
           </Link>
-          <Link href="/my_trips" className="hover:text-blue-500">
+          <Link href="/my_trips" className="hover:text-orange-500">
             My Trips
           </Link>
-          <Link href="/about_us" className="hover:text-blue-500">
+          <Link href="/about_us" className="hover:text-orange-500">
             About Us
           </Link>
         </div>
