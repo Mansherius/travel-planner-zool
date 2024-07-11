@@ -1,4 +1,3 @@
-// Carousel.tsx
 import React, { useState, useEffect } from 'react';
 import DayCard from './DayCard';
 import { DayInfo } from './types';
@@ -9,15 +8,42 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ days }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [carouselNumber, setCarouselNumber] = useState(4);
+
+  useEffect(() => {
+    const updateClasses = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 640) {
+        setCarouselNumber(1);
+      } else if (screenWidth >= 640 && screenWidth < 1110) {
+        setCarouselNumber(2);
+      } else if (screenWidth < 1110 && screenWidth < 1350) {
+        setCarouselNumber(3);
+      } else {
+        setCarouselNumber(4);
+      }
+    };
+
+    // Initial class setting
+    updateClasses();
+
+    // Add event listener
+    window.addEventListener("resize", updateClasses);
+
+    // Clean up event listener
+    return () => {
+      window.removeEventListener("resize", updateClasses);
+    };
+  }, []);
 
   useEffect(() => {
     setCurrentIndex(0);
   }, [days]);
 
-  const visibleDays = days.slice(currentIndex, currentIndex + 4);
+  const visibleDays = days.slice(currentIndex, currentIndex + carouselNumber);
 
   const handleNext = () => {
-    if (currentIndex + 4 < days.length) {
+    if (currentIndex + carouselNumber < days.length) {
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -30,9 +56,9 @@ const Carousel: React.FC<CarouselProps> = ({ days }) => {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="flex">
+      <div className="flex" style={{ flexWrap: 'nowrap' }}>
         {visibleDays.map((day, index) => (
-          <div key={index} className="w-1/4 flex-shrink-0 px-2">
+          <div key={index} className="flex-grow-0 flex-shrink-0 px-2" style={{ flexBasis: `calc(100% / ${carouselNumber})` }}>
             <DayCard {...day} />
           </div>
         ))}
@@ -42,7 +68,7 @@ const Carousel: React.FC<CarouselProps> = ({ days }) => {
           &lt;
         </button>
       )}
-      {currentIndex + 4 < days.length && (
+      {currentIndex + carouselNumber < days.length && (
         <button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
           &gt;
         </button>
