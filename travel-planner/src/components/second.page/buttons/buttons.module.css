@@ -1,122 +1,124 @@
-/* buttons.module.css */
 .buttons {
-    @apply  absolute bottom-56 left-0 right-0 bg-transparent px-8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  @apply  absolute bottom-56 left-0 right-0 bg-transparent px-8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.buttonsContainer {
+  @apply  container mx-auto flex justify-between py-4;
+}
+.buttonsLeft,
+.buttonsRight {
+  @apply flex space-x-4;
+}
+.buttons1,
+.buttons2 {
+  @apply flex items-center justify-center px-4 py-2 sm:py-4 text-black rounded-lg focus:outline-none;
+  padding: 15px;
+  border-radius: 24px;
+  outline: none;
+  border: none;
+  background-color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+.buttons2:hover {
+  background-color: orangered;
+  color: white;
+}
+.buttons1:hover {
+  background-color: orangered;
+  color: white;
+}
+.icon {
+  @apply inline w-5 h-5 mr-2;
+  
+}
+.flexButton {
+  @apply flex items-center justify-center;
+}
+.buttons4 {
+  @apply flex items-center justify-center px-4 py-2 text-black rounded-lg;
+  border-radius: 10px;
+  background-color: black;
+  position: relative;
+}
+.badge {
+  @apply absolute -top-5 -right-5 bg-red-500 text-white rounded-full px-2 py-1 text-sm;
+}
+.buttons4:hover {
+  background-color: orangered;
+}
+.buttons3:hover {
+  background-color: orangered;
+}
+.buttons3 {
+  @apply flex items-center justify-center px-4 py-2 bg-blue-500 text-white rounded-full focus:outline-none;
+  outline: none;
+  border: none;
+  background-color: black;
+  font-size: 15px;
+  font-weight: 500;
+}
+.dropdownContainer {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.dropdownOption {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.dropdownOption:hover {
+  background-color: #f0f0f0;
+}
+@media (max-width: 425px) {
   .buttonsContainer {
-    @apply container mx-auto flex justify-between py-4;
+    @apply container mx-auto flex justify-between py-2;
   }
-  .buttonsLeft,
-  .buttonsRight {
-    @apply flex space-x-4;
-  }
-  .buttons1,
-  .buttons2 {
-    @apply flex items-center justify-center px-4 py-2  text-black rounded-lg  focus:outline-none;
-    padding: 13px;
-    padding-left: 25px;
-    padding-right: 25px;
-    border-radius: 24px;
-    outline: none;
-    border: none;
-    background-color: white;
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .buttons2:hover{
-    background-color:orangered;
-    color:white;
-  }
-  .buttons1:hover{
-    background-color: orangered;
-    color:white;
-  }
-  .icon {
-    @apply inline w-5 h-5 mr-2;
-  }
-  .flexButton {
-    @apply flex items-center justify-center;
-  }
-  .buttons4{
-    border-radius: 10px;
-    background-color: black;
-    padding: 10px;
-    position: relative;
- 
+  .buttons1, .buttons2, .buttons3, .buttons4 {
+    @apply py-1 px-1;
+    font-size: 12px;
   }
   .badge {
-    @apply  absolute -top-5 -right-5  bg-red-500 text-white rounded-full px-2 py-1 text-sm;
+    @apply absolute top-0 right-0 bg-red-500 text-white rounded-full px-1 py-0;
+    font-size: x-small;
+    transform: translate(50%, -50%);
   }
-  .buttons4:hover{
-    background-color:orangered;
+  .buttonsLeft, .buttonsRight {
+    @apply flex flex-col space-y-2 w-full; /* Change from block to flex-col for vertical alignment */
   }
-  .buttons3:hover{
-    background-color:orangered;
+  .buttonsLeft {
+    @apply items-start w-full; /* Align to the left and take full width */
   }
-  .buttons3{
-    @apply flex items-center justify-center px-4 py-2 bg-blue-500 text-white rounded-full focus:outline-none;
-   
-    outline: none;
-    border: none;
-    background-color: black;
-    font-size: 15px;
-    font-weight: 500;
+  .buttonsRight {
+    @apply items-end w-full; /* Align to the right and take full width */
+  }
+}
 
+@media (max-width: 640px) {
+  .icon{
+    @apply w-3 h-3;
   }
-  .dropdownContainer {
-    position: relative;
+  .buttons1, .buttons2,.buttons4,.buttons3 {
+    @apply py-2 px-2;
   }
-  
-  .dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  .buttons {
+    @apply py-1 px-1 bottom-48;
   }
-  
-  .dropdownOption {
-    padding: 8px 16px;
-    cursor: pointer;
+  .buttonsLeft, .buttonsRight {
+    @apply flex flex-col space-y-2 w-full; /* Change from block to flex-col for vertical alignment */
   }
-  
-  .dropdownOption:hover {
-    background-color: #f0f0f0;
+  .buttonsLeft {
+    @apply items-start w-full; /* Align to the left and take full width */
   }
-  @media (max-width:425px){
-    .buttonsContainer {
-      @apply container mx-auto flex justify-between py-2 ;
-    }
-   .buttons2,.buttons3,.buttons4{
-      @apply py-1 px-1;
-      font-size: 12px;
-    }
-    .buttons1{
-      padding: 10px;
-    }
-    .badge {
-      @apply absolute top-0 right-0  bg-red-500 text-white rounded-full px-1 py-0 ;
-      font-size: x-small;
-    }
+  .buttonsRight {
+    @apply items-end w-full; /* Align to the right and take full width */
   }
-  @media (max-width:1457px){
-    .badge{
-      @apply right-16;
-    }
-  }
-  @media (max-width:1024px){
-    .badge{
-      @apply right-0 px-1 py-0 top-1;
-      font-size: small;
-    }
-  }
- 
-  @media (min-width:1458px) and (max-width:1600){
-    .badge{
-     margin-right:2px  ;
-    }
-  }
- 
+}

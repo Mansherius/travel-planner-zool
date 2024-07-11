@@ -9,24 +9,28 @@
   transition: all 0.3s ease;
 }
 
-.blurEffect {
-  filter: blur(5px); /* Adjust the blur amount as per your design */
-}
+
 .selectedCard {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
-  width: 30%;
-  height: auto;
+  z-index: 100;
+  width: 90%; /* Adjust width as per your design */
+  max-width: 600px; /* Example max-width */
+  height: 200px;
   background: rgb(255, 254, 254);
   color: rgb(5, 5, 5);
+  padding: 1rem; /* Add padding for better spacing */
+  border-radius: 1rem;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.12);
+
 }
 
 .cardBody {
   display: flex;
   flex-direction: column;
+
 }
 
 .cardHeader {
@@ -116,8 +120,36 @@
 .cardFooter div{
   display: flex;
   padding: 8px 12px;
-  background-color: #242020;
+  background-color: #000;
   border-radius: 15px;
   color: white;
 }
 
+.additionalSections h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.additionalSections div {
+display: flex;
+}
+
+
+
+.amenities, .reviews, .activities, .cuisine {
+  @apply flex flex-col;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  
+  
+}
+
+.reviews p, .cuisine p {
+  margin: 0.5rem 0;
+}
+.items{
+  @apply gap-2
+}
+.items p{
+  @apply border rounded-2xl bg-black text-white p-2 px-4;
+}
