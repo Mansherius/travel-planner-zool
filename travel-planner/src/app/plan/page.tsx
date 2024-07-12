@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Banner from "../../components/second.page/banner/banner";
 import Card from "../../components/second.page/card/card";
 import Footer from "@/components/shared/Footer";
@@ -97,7 +97,7 @@ const cardData = [
     imageUrl: "/images/second.page/img9.png",
     rating: 3.5,
     price: 60,
-    type:"loaction",
+    type:"location",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac erat ante. Integer aliquam purus a turpis condimentum, nec consectetur nibh tincidunt. Aenean non erat vel velit varius vehicula. Sed cursus magna vel orci sodales, in condimentum nunc efficitur. Fusce nec urna sit amet magna interdum pharetra. Duis ultricies ipsum et nunc facilisis, vel pharetra sapien sollicitudin. Maecenas tincidunt, purus id molestie fringilla, lectus erat suscipit est, nec cursus lorem urna a nunc. Praesent sit amet erat a justo lacinia aliquet. Phasellus ac ligula in odio fringilla feugiat. In id turpis sed quam blandit efficitur. Donec vel mi quam. Etiam fringilla ante a diam interdum, sed volutpat turpis congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sit amet urna at nunc ullamcorper malesuada.",
   },
@@ -139,6 +139,12 @@ const SecondPage: React.FC = () => {
   const [sortOrder, setSortOrder] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>(""); 
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  useEffect(() => {
+    // Scroll to the selected card when `selectedCard` changes
+    if (selectedCard !== null && cardRefs.current[selectedCard]) {
+      cardRefs.current[selectedCard].scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [selectedCard]);
 
   const handleCardClick = (index: number) => {
     setSelectedCard(index);
@@ -197,7 +203,7 @@ const SecondPage: React.FC = () => {
   return (
     <div className="mx-auto min-h-screen">
       <Banner onSearch={handleSearch} onTabChange={handleTabChange} onSortChange={handleSortChange} cartCount={cardCount.length}/>
-      <div className="flex-grow mt-8  inset-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:mx-10 xl:mx-[200px] justify-center items-center">
+      <div className="flex-grow mt-8 pb-32 inset-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 sm:mx-10 xl:mx-[200px] justify-center items-center">
         {sortedCardData.map((data, index) => (
           <Card
             key={index}
