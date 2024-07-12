@@ -10,8 +10,7 @@ import {
 } from "react-icons/fa";
 
 const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
-  const { title, subtitle, imageUrl, rating, price, description, type } =
-    cardData;
+  const { title, subtitle, imageUrl, rating, price, description, type } = cardData;
 
   const renderStars = (rating: any) => {
     const fullStars = Math.floor(rating);
@@ -23,9 +22,7 @@ const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
       stars.push(<FaStar key={`full-${i}`} size={20} className="mt-1" />);
     }
     for (let i = 0; i < halfStars; i++) {
-      stars.push(
-        <FaStarHalfAlt key={`half-${i}`} size={20} className="mt-1" />
-      );
+      stars.push(<FaStarHalfAlt key={`half-${i}`} size={20} className="mt-1" />);
     }
     for (let i = 0; i < emptyStars; i++) {
       stars.push(<FaRegStar key={`empty-${i}`} size={20} className="mt-1" />);
@@ -59,8 +56,7 @@ const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
           <div className={styles.additionalSections}>
             <div className={styles.activities}>
               <h5>Activities</h5>
-            
-                <div className={styles.items}>
+              <div className={styles.items}>
                 <p>Hiking</p>
                 <p>Sightseeing</p>
                 <p>Shopping</p>
@@ -73,7 +69,6 @@ const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
           <div className={styles.additionalSections}>
             <div className={styles.cuisine}>
               <h5>Cuisine Type</h5>
-              {/* <p>Italian, Chinese, Indian</p> */}
               <div className={styles.items}>
                 <p>Italian</p>
                 <p>Chinese</p>
@@ -110,10 +105,7 @@ const Card = ({ cardData, onClick, onClose, isSelected, onAdd }: any) => {
           </div>
         </div>
       </div>
-      <div
-        className={styles.cardBody}
-        onClick={!isSelected ? onClick : undefined}
-      >
+      <div className={styles.cardBody} onClick={!isSelected ? onClick : undefined}>
         <div className={styles.cardImage}>
           <Image src={imageUrl} alt="" layout="fill" className="object-cover" />
           <div className={styles.starContainer}>

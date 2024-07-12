@@ -18,20 +18,24 @@
   z-index: 100;
   width: 90%; /* Adjust width as per your design */
   max-width: 600px; /* Example max-width */
-  height: 200px;
+  height: auto;
+  max-height: 80vh; /* Set maximum height to a certain viewport height */
   background: rgb(255, 254, 254);
   color: rgb(5, 5, 5);
   padding: 1rem; /* Add padding for better spacing */
   border-radius: 1rem;
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.12);
-
+  overflow-y: auto; /* Add scroll feature */
 }
 
 .cardBody {
   display: flex;
   flex-direction: column;
-
 }
+
+/* Other styles remain unchanged */
+
+
 
 .cardHeader {
   display: flex;
